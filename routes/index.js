@@ -19,11 +19,11 @@ module.exports = function(passport) {
     'use strict';
 
     /* GET home page. */
-    router.get('/', isAuthenticated, function(request, response, next) {
+    router.get('/',  function(request, response, next) {
         'use strict';
         response.render('index', {
             title: 'Elven Site Options',
-            author: 'Charlie Calvert'
+            author: 'Brenda Means'
         });
     });
 
@@ -37,7 +37,7 @@ module.exports = function(passport) {
 
     router.post('/loginUser', passport.authenticate('login', {
         successRedirect: '/',
-        failureRedirect: '/login'
+        failureRedirect: '/'
     }));
 
     router.get('/loggedin', function(request, response) {
@@ -52,7 +52,7 @@ module.exports = function(passport) {
     /* Handle Registration POST */
     router.post('/signup', passport.authenticate('signup', {
         successRedirect: '/#/login',
-        failureRedirect: '/signup'
+        failureRedirect: '/'
     }));
 
     return router;

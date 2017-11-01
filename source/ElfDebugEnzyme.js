@@ -11,8 +11,6 @@
  *   elfDebugEnzyme.getIndex(wrapper, 'div#addressShow', 3, false);
  */
 
-export default class ElfDebugEnzyme {
-
     /**
      * @param showData: Whether or not to display output
      *
@@ -20,7 +18,10 @@ export default class ElfDebugEnzyme {
      * using this debug tool. That way, each message written to
      * the console includes the name of the class that is
      * requesting to see the output.
+     *
      */
+export default class ElfDebugEnzyme {
+
     constructor(showData=false, callerName = '') {
         this.showData = showData;
         this.callerName = callerName + ':\n';

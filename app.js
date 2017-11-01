@@ -5,9 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-// Connect to DB
+/*// Connect to DB
 var connect = require('./routes/connect');
-connect.doConnection(false);
+connect.doConnection(false);*/
 
 var makers = require('./routes/makers');
 var users = require('./routes/users');
@@ -16,7 +16,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 // Configuring Passport
 var passport = require('passport');
