@@ -7,11 +7,19 @@ var router = express.Router();
 var walker = require('isit-site-tools-means').walker;
 var walkRunner = require('isit-site-tools-means').walkRunner;
 var imagesTest = require('isit-site-tools-means').imagesTest;
+<<<<<<< HEAD
 var config = require('isit-code-means').elfConfig;
 var fs = require('fs');
 var utils = require('isit-code-means').elfUtils;
 var imageHelp = require('isit-site-tools-means').imageHelp;
 var elfLog = require('isit-code-means').elvenLog('makers');
+=======
+var config = require('isit-code-lastname').elfConfig;
+var fs = require('fs');
+var utils = require('isit-code-lastname').elfUtils;
+var imageHelp = require('isit-site-tools-means').imageHelp;
+var elfLog = require('isit-code-lastname').elvenLog('makers');
+>>>>>>> 495f551c33e3fe195a9652582b04b7a799ac1e35
 elfLog.setLevel(elfLog.logLevelDetails);
 
 router.get('/makeHtml', function(request, response) {
@@ -33,7 +41,7 @@ router.get('/pixPicker', function(request, response) {
 router.get('/config', function(request, response) {
     'use strict';
     config.useLocalConfig = false;
-    var user = 'calvert';
+    var user = 'means';
     config.loadAsync()
         .then(function(configData) {
             elfLog.nano('CONFIG DATA: ', JSON.stringify(configData, null, 4));
@@ -116,7 +124,7 @@ router.get('/deleteMarkdown', function(request, response) {
 router.get('/walk', function(request, response) {
     console.log(request.query);
     //const runConfig = require('./markdown-to-html/runners/sample-runner');
-    walkRunner('calvert', request.query.siteDirsIndex)
+    walkRunner('means', request.query.siteDirsIndex)
         .then(function(report) {
             response.send(report);
         })
