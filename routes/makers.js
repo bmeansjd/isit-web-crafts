@@ -7,19 +7,19 @@ var router = express.Router();
 var walker = require('isit-site-tools-means').walker;
 var walkRunner = require('isit-site-tools-means').walkRunner;
 var imagesTest = require('isit-site-tools-means').imagesTest;
-<<<<<<< HEAD
+
 var config = require('isit-code-means').elfConfig;
 var fs = require('fs');
 var utils = require('isit-code-means').elfUtils;
 var imageHelp = require('isit-site-tools-means').imageHelp;
 var elfLog = require('isit-code-means').elvenLog('makers');
-=======
-var config = require('isit-code-lastname').elfConfig;
+//=======
+var config = require('isit-code-means').elfConfig;
 var fs = require('fs');
-var utils = require('isit-code-lastname').elfUtils;
+var utils = require('isit-code-means').elfUtils;
 var imageHelp = require('isit-site-tools-means').imageHelp;
-var elfLog = require('isit-code-lastname').elvenLog('makers');
->>>>>>> 495f551c33e3fe195a9652582b04b7a799ac1e35
+var elfLog = require('isit-code-means').elvenLog('makers');
+//>>>>>>> 495f551c33e3fe195a9652582b04b7a799ac1e35
 elfLog.setLevel(elfLog.logLevelDetails);
 
 router.get('/makeHtml', function(request, response) {

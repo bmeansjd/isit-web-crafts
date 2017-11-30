@@ -9,6 +9,10 @@ var bodyParser = require('body-parser');
 var connect = require('./routes/connect');
 connect.doConnection(false);*/
 
+// Connect to DB
+//var connect = require('./routes/connect');
+//connect.doConnection(false);
+
 var makers = require('./routes/makers');
 var users = require('./routes/users');
 

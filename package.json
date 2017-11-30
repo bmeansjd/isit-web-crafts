@@ -1,5 +1,5 @@
 {
-  "name": "isit-web-crafts",
+  "name": "isit-web-crafts-means",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -7,19 +7,17 @@
     "start": "nodemon ./bin/www",
     "bundle": "node_modules/.bin/webpack"
   },
-  
-    "jest": {
-      "verbose": true,
-      "coveragePathIgnorePatterns": [
-        "/node_modules/",
-        "ElfDebugEnzyme.js",
-        "tiny-pub-sub.js",
-        "temp-poly-fills.js"
-      ],
-      "setupFiles": [
-        "./source/setup-jest.js"
-      ]
-    
+  "jest": {
+    "verbose": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "ElfDebugEnzyme.js",
+      "tiny-pub-sub.js",
+      "temp-poly-fills.js"
+    ],
+    "setupFiles": [
+      "./source/setup-jest.js"
+    ]
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -29,6 +27,8 @@
     "debug": "^3.1.0",
     "express": "^4.16.1",
     "express-session": "^1.15.6",
+    "isit-code-means": "^1.0.0",
+    "isit-site-tools-means": "^1.0.0",
     "jquery": "^3.2.1",
     "marked": "~0.3.6",
     "mongoose": "^4.12.0",

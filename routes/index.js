@@ -6,20 +6,27 @@ var isAuthenticated = function(request, response, next) {
 
     // Passport added the this method to the request object.
     console.log('isAuthenticated called');
-    if (request.isAuthenticated()) {
+    //if (request.user.isAuthenticated()) {
+
+    if (!request.isAuthenticated()){
         console.log('successfully authenticated');
         return next();
-    }
+    };
+
 
     console.log('in isAuthenticated, user not authenticate, send to login');
     response.redirect('/login');
+};
+
+exports.getPackageDescription = function() {
+    return 'This is Brenda Means package';
 };
 
 module.exports = function(passport) {
     'use strict';
 
     /* GET home page. */
-    router.get('/',  function(request, response, next) {
+    router.get('/',isAuthenticated,function(request, response, next) {
         'use strict';
         response.render('index', {
             title: 'Elven Site Options',
@@ -36,8 +43,8 @@ module.exports = function(passport) {
     });
 
     router.post('/loginUser', passport.authenticate('login', {
-        successRedirect: '/',
-        failureRedirect: '/'
+        successRedirect: '/#/login',
+        failureRedirect: '/#/login'
     }));
 
     router.get('/loggedin', function(request, response) {
@@ -45,14 +52,14 @@ module.exports = function(passport) {
     });
 
     router.get('/signup', function(req, res) {
-        console.log('Get signup');
+        console.log('Get sign-up');
         res.render('register', {});
     });
 
     /* Handle Registration POST */
     router.post('/signup', passport.authenticate('signup', {
         successRedirect: '/#/login',
-        failureRedirect: '/'
+        failureRedirect: '/#/login'
     }));
 
     return router;
