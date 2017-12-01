@@ -32,21 +32,22 @@
         },
         {
             "name": "california",
-            "baseDir": "/var/www/html/images",
+            "baseDir": "/var/www/html/california",
             "cloudPath": "/images",
             "createSmallImages": true
         },
         {
             "name": "california1",
-            "baseDir": "/var/www/html/images",
+            "baseDir": "/var/www/html/images/california1",
             "cloudPath": "https://s3.amazonaws.com/s3bucket01.elvenware.com",
             "createSmallImages": true
         },
         {
             "name": "california2",
-            "baseDir": "/var/www/html/images",
+            "baseDir": "/var/www/html/images/california2",
             "cloudPath": "/images",
             "createSmallImages": true
         }
     ]
 }
+
