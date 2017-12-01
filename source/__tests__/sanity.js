@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactHome from '../ReactHome';
+import ReactHome from '../Reacthome';
 import HomeButtons from '../HomeButtons';
 import {configure, shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
