@@ -1,10 +1,10 @@
 requirejs.config({
     baseUrl: '.',
     paths: {
-        jquery: 'components/jquery/dist/jquery',
-        bootstrap: 'components/bootstrap/dist/js/bootstrap',
+        jquery: 'bower_components/jquery/dist/jquery',
+        bootstrap: 'bower_components/bootstrap/dist/js/bootstrap',
         control: 'javascripts/control',
-        elfLog: 'components/elven-tools/elf-log',
+        elfLog: 'bower_components/elven-tools/elf-log',
         makeHtml: 'javascripts/make-html/make-html',
         walking: 'javascripts/make-html/walking',
         makeImage: 'javascripts/make-image/make-image',

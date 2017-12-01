@@ -2,6 +2,18 @@
   "name": "isit-web-crafts-means",
   "version": "1.0.0",
   "private": true,
+  "jest":  {
+    "verbose": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "ElfDebugEnzyme.js",
+      "tiny-pub-sub.js",
+      "temp-poly-fills.js"
+    ],
+    "setupFiles": [
+      "./source/setup-jest.js"
+    ]
+  },
   "scripts": {
     "test": "jest",
     "karma-test": "karma start",
@@ -17,7 +29,6 @@
     "express-session": "^1.15.6",
     "isit-code-means": "^1.0.0",
     "isit-site-tools-means": "^1.0.0",
-    "jade": "~1.11.0",
     "marked": "~0.3.6",
     "material-ui": "^0.19.4",
     "mongoose": "^4.13.5",
@@ -60,3 +71,4 @@
     "webpack-dev-server": "^2.9.5"
   }
 }
+

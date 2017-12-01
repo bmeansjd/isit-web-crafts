@@ -32,4 +32,27 @@ describe('WebCrafts Sanity Test', function() {
         elfDebugEnzyme.getLast(wrapper, 'h1', true);
         expect(wrapper.contains(h1tag)).toEqual(true);
     });
+
+    it('publishes clientMakeHtml event after button click', () => {
+        const wrapper = shallow(<HomeButtons/>);
+        let subscriptionCalled = false;
+        $.subscribe('clientMakeHtml', (event, target) => {
+            console.log(JSON.stringify(event, null, 4));
+            console.log(target);
+            expect(event.type).toBe('clientMakeHtml');
+            expect(target.message).toBe('The user wants to makeHtml.');
+            subscriptionCalled = true;
+        });
+        wrapper.find('#makeHtml').simulate('click');
+        expect(subscriptionCalled).toBeTruthy();
+    });
+
+    it('publishes clientMakeHtml event after button click with done', (done) => {
+        const wrapper = shallow(<HomeButtons/>);
+        $.subscribe('clientMakeHtml', (event, target) => {
+            expect(target.message).toBe('The user wants to makeHtml.');
+            done();
+        });
+        wrapper.find('#makeHtml').simulate('click');
+    });
 });

@@ -36,8 +36,6 @@ var getAllFilesFromFolder = function(dir, oldPattern, newPattern) {
 
 };
 
-
 var oldPattern = "jade";
 var newPattern = "pug";
 var results = getAllFilesFromFolder('.', oldPattern, newPattern);
-
