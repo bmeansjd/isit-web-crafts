@@ -1,6 +1,9 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
+import MakeHtml from './MakeHtml';
+import MakeHtmlHomeButton from './MakeHtmlHomeButton';
+import MakeHtmlDropdowns from './MakeHtmlDropDowns';
 
 class MakeHtml extends React.Component {
     constructor() {
@@ -37,4 +40,5 @@ const buttonStyle = {
     margin: '10px 10px 10px 0'
 };
 
-export default MakeHtml;
+export default MakeHtmlHomeButton;
+

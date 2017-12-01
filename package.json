@@ -2,6 +2,14 @@
   "name": "isit-web-crafts-means",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "test": "jest --watch",
+    "test-cover": "jest  --coverage  --watch",
+    "karma-test": "karma start",
+    "start": "nodemon ./bin/www",
+    "buildDev": "node_modules/ .bin/webpack --watch",
+    "bundle": "node_modules/.bin/webpack --watch"
+  },
   "jest": {
     "verbose": true,
     "coveragePathIgnorePatterns": [
@@ -14,12 +22,6 @@
       "./source/setup-jest.js"
     ]
   },
-  "scripts": {
-    "test": "jest",
-    "karma-test": "karma start",
-    "start": "nodemon ./bin/www",
-    "bundle": "node_modules/.bin/webpack"
-  },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
@@ -29,6 +31,7 @@
     "express-session": "^1.15.6",
     "isit-code-means": "^1.0.0",
     "isit-site-tools-means": "^1.0.0",
+    "jquery": "^3.2.1",
     "marked": "~0.3.6",
     "material-ui": "^0.19.4",
     "mongoose": "^4.13.5",
@@ -70,6 +73,7 @@
     "karma-jasmine": "~1.1.1",
     "karma-phantomjs-launcher": "~1.0.4",
     "karma-spec-reporter": "0.0.31",
+    "prettier": "1.8.2",
     "react-test-renderer": "^16.2.0",
     "webpack-dev-server": "^2.9.5"
   }

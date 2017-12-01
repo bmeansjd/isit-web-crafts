@@ -10,7 +10,7 @@ import jQuery from 'jquery';
 global.jQuery = jQuery;
 global.$ = jQuery;
 import '../fake-pub-sub';
-import raf from '../temp-poly-fills';
+import temppolyfills from '../temp-poly-fills';
 
 describe('react-home test', function() {
 

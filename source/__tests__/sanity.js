@@ -11,7 +11,11 @@ import jQuery from 'jquery';
 global.jQuery = jQuery;
 global.$ = jQuery;
 import '../fake-pub-sub';
-import raf from '../temp-poly-fills';
+import temppolyfills from '../temp-poly-fills';
+
+
+
+
 
 describe('Basic Sanity Test', function() {
 
@@ -20,14 +24,26 @@ describe('Basic Sanity Test', function() {
     it('expects true to be true', function() {
         expect(true).toBe(true);
     });
+
     it('tests if we can load ReactHome',() => {
         const div = document.createElement('div');
         ReactDoom.render(<ReactHome/>, div);
-    })
+    });
+
+    it('tests if we can load HomeButtons',() => {
+        const div = document.createElement('div');
+        ReactDoom.render(<HomeButtons/>, div);
+    });
+
 
     it('renders without crashing', () => {
         const div = document.createElement('div');
         ReactDOM.render(<ReactHome/>, div);
+    });
+
+    it('renders without crashing', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<HomeButtons/>, div);
     });
 
     it('renders default value of H1 tag', () => {

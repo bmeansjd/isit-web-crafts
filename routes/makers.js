@@ -112,7 +112,7 @@ router.get('/deleteMarkdown', function(request, response) {
         });
     });
 });
-
+/*
 router.get('/walk', function(request, response) {
     console.log(request.query);
     //const runConfig = require('./markdown-to-html/runners/sample-runner');
@@ -123,7 +123,19 @@ router.get('/walk', function(request, response) {
         .catch(function(err) {
             throw err;
         })
+});*/
+
+router.get('/walk', function(request, response) {
+    walkRunner('calvert', request.query.siteDirsIndex, false)
+        .then(function(report) {
+            response.send(report);
+        })
+        .catch(function(err) {
+            throw err;
+        });
 });
+
+
 
 router.get('/walk-old', function(request, response) {
     'use strict';

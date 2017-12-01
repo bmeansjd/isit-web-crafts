@@ -39,6 +39,12 @@ define(['display', 'walking'], function(display, walking) {
         walking.runWalk(radioWalkType);
     }
 
+    function publishRectMakeHtml() {
+        $.publish('reactMakeHtml', {
+            message : "Publisher Constructor Called"
+        });
+    }
+
     return {
         init: function() {
             $('#pageLoad').load('/makers/makeHtml', function() {
@@ -49,6 +55,7 @@ define(['display', 'walking'], function(display, walking) {
                 });
                 walking.configurePageOne();
                 loadConfig();
+                publishRectMakeHtml()
             });
         }
     };
