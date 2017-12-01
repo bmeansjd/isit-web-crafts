@@ -1,7 +1,3 @@
-/**
- * Created by charlie on 5/16/16.
- */
-
 requirejs.config({
     baseUrl: '.',
     paths: {
@@ -15,13 +11,14 @@ requirejs.config({
         imagePicker: 'javascripts/make-image/image-picker',
         display: 'javascripts/tools/display',
         settings: 'javascripts/tools/settings',
-        utilities: 'javascripts/tools/utilities'
+        utilities: 'javascripts/tools/utilities',
+        reactBundle: 'javascripts/bundle',
     }
 });
 
 requirejs(['jquery'], function($) {
     'use strict';
-    requirejs(['bootstrap', 'control'], function(bootstrap, control) {
+    requirejs(['bootstrap', 'control', 'reactBundle'], function(bootstrap, control) {
         control();
         $('.navbar-nav li.trigger-collapse a').click(function(event) {
             $('.navbar-collapse').collapse('hide');

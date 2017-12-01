@@ -2,7 +2,7 @@
  * Created by charlie on 10/7/15.
  */
 
-var walker = require('isit-site-tools-calvert').walker;
+var walker = require('isit-site-tools-means').walker;
 
 describe('Elvenware Simple Plain Suite', function() {
 

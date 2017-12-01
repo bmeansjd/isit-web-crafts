@@ -1,7 +1,7 @@
 var login = require('./login');
 var signup = require('./signup');
 var User = require('../models/user');
-var elfLog = require('isit-code-lastname').elfLog('passport-init');
+var elfLog = require('isit-code-means').elfLog('passport-init');
 
 module.exports = function(passport) {
     'use strict';
