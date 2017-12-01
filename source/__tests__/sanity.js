@@ -13,13 +13,17 @@ global.$ = jQuery;
 import '../fake-pub-sub';
 import raf from '../temp-poly-fills';
 
-describe('WebCrafts Sanity Test', function() {
+describe('Basic Sanity Test', function() {
 
     'use strict';
 
     it('expects true to be true', function() {
         expect(true).toBe(true);
     });
+    it('tests if we can load ReactHome',() => {
+        const div = document.createElement('div');
+        ReactDoom.render(<ReactHome/>, div);
+    })
 
     it('renders without crashing', () => {
         const div = document.createElement('div');

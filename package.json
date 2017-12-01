@@ -2,7 +2,7 @@
   "name": "isit-web-crafts-means",
   "version": "1.0.0",
   "private": true,
-  "jest":  {
+  "jest": {
     "verbose": true,
     "coveragePathIgnorePatterns": [
       "/node_modules/",
@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
     "babel-jest": "^21.2.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
@@ -51,6 +52,8 @@
     "babel-preset-stage-0": "^6.24.1",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
+    "eslint": "^4.12.1",
+    "eslint-plugin-react": "^7.5.1",
     "grunt": "~1.0.1",
     "grunt-contrib-clean": "~1.1.0",
     "grunt-contrib-jade": "~1.0.0",
@@ -71,4 +74,3 @@
     "webpack-dev-server": "^2.9.5"
   }
 }
-
