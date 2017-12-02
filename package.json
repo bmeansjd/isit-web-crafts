@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "test": "jest --watch",
-    "test-cover": "jest  --coverage  --watch",
+    "test-cover": "jest  --coverage   --watchAll",
     "karma-test": "karma start",
     "start": "nodemon ./bin/www",
-    "buildDev": "node_modules/ .bin/webpack --watch",
-    "bundle": "node_modules/.bin/webpack --watch"
+    "buildDev": "node_modules/ .bin/webpack --watchAll",
+    "bundle": "node_modules/.bin/webpack --watchAll"
   },
+
   "jest": {
     "verbose": true,
     "coveragePathIgnorePatterns": [
@@ -18,10 +19,12 @@
       "tiny-pub-sub.js",
       "temp-poly-fills.js"
     ],
+
     "setupFiles": [
       "./source/setup-jest.js"
     ]
   },
+
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
